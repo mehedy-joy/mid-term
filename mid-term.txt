@@ -1,0 +1,35 @@
+q1:
+table-
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   
+);
+
+insert value- 
+INSERT INTO table_name (column1, column2, column3)
+VALUES (value1, value2, value3)
+
+1. SELECT DISTINCT S.Sname
+FROM Student S, Class C, Enrolled E, Faculty F
+WHERE S.snum = E.snum AND E.cname = C.name AND
+C.fid = F.fid AND
+F.fname = ‘I.Teach’AND S.level = ‘SR
+
+2.SELECTS.level, AVG(S.age)
+FROM Student S 
+GROUP BYS.level
+
+3.
+SELECTS.level, AVG(S.age)
+FROM Student S 
+WHERE S.level<>‘JR’
+GROUP BYS.level
+4.
+SELECT F.fname, COUNT(*) AS CourseCount
+FROM Faculty F, Class C 
+WHERE F.fid = C.fid 
+GROUP BY F.fid, F.fname 
+HAVING   EVERY( C.room = ‘R128’ )
+
